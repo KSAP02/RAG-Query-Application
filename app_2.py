@@ -9,7 +9,6 @@ from langchain.schema import Document
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.docstore.in_memory import InMemoryDocstore
 
-
 load_dotenv() # load the env content
 
 api_key = os.getenv('HF_API_KEY')
