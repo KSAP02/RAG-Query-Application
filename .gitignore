@@ -1,0 +1,6 @@
+ 
+# Ignore Conda virtual environment
+venv_rag/
+
+# Ignore Python cache folders
+__pycache__/
