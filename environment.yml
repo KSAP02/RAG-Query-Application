@@ -1,4 +1,4 @@
-name: D:\Projects\AI Apps\RAG\venv_rag
+name: venv_rag
 channels:
   - defaults
   - https://repo.anaconda.com/pkgs/main
@@ -102,4 +102,3 @@ dependencies:
       - urllib3==2.3.0
       - yarl==1.18.3
       - zstandard==0.23.0
-prefix: D:\Projects\AI Apps\RAG\venv_rag
