@@ -7,3 +7,6 @@ __pycache__/
 
 # Ignore the .env file
 .env
+
+# Ignore app.py
+app.py
