@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Code Documentation/Functions/load_pdfs_from_directory.md",
+                "file": "Git functions.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "load_pdfs_from_directory"
+              "title": "Git functions"
             }
           },
           {
@@ -50,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -197,7 +197,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "853e8340dabdf9b5",
+  "active": "3291a938cead176a",
   "lastOpenFiles": [
     "Code Documentation/Functions/load_pdfs_from_directory.md",
     "Git functions.md",
