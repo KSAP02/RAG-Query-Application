@@ -1,9 +1,11 @@
 For creating virtual environment after cloning repo.
 
-*git clone https://github.com/yourusername/my-conda-project.git*
+Inside the terminal of working folder, type:
 
-*cd "my-conda-project-folder"*
+*git clone "repo-url"*
+
+*cd "project-folder"*
 
 *conda env create -f environment.yml*
 
-*conda activate my_env*
+*conda activate virtual_env*
