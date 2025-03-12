@@ -4,3 +4,6 @@ venv_rag/
 
 # Ignore Python cache folders
 __pycache__/
+
+# Ignore the .env file
+.env
