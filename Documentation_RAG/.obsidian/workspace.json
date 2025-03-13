@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Code Documentation/Functions/load_pdfs_from_directory.md",
+                "file": "Code_Documentation/Functions/load_pdfs_from_directory.md",
                 "mode": "source",
                 "source": false
               },
@@ -168,17 +168,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "853e8340dabdf9b5",
+  "active": "80b21e3f88897312",
   "lastOpenFiles": [
     "Images/load_pdfs_from_directory.png",
-    "Code Documentation/Functions/load_pdfs_from_directory.md",
+    "Code_Documentation/Functions/load_pdfs_from_directory.md",
     "Images",
     "requirements.txt.md",
     "Git functions.md",
-    "Code Documentation/Workflow.md",
-    "Code Documentation/Functions",
+    "Code_Documentation/Workflow.md",
+    "Code_Documentation/Functions",
     "Code Documentation/Untitled",
-    "Code Documentation",
+    "Code_Documentation",
     "Welcome.md"
   ]
 }
