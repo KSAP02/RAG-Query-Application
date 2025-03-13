@@ -6,3 +6,5 @@ pymupdf
 python-dotenv
 fitz
 langchain-community
+
+

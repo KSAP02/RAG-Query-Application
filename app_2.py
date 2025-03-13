@@ -21,15 +21,34 @@ LLM_MODEL = "google/flan-t5-base"  # Can change inference model
 PDF_DIR = "data"  # Directory containing PDF files
 
 
-# === LOADING THE PDF DATA FROM THE DIRECTORIES INTO A LIST OF DOCUMENT DATA===
+# === LOADING THE PDF DATA FROM THE DIRECTORIES INTO A LIST OF DOCUMENT DATA ===
+
+# Takes in the directory path that is in the working folder holding the pdf documents as "str"(PDF_DIR), as a parameter.
+# Return a list of "Document" object instances containing text data from all the pdfs and their meta data.
 def load_pdfs_from_directory(pdf_dir):
+    
+    # Initializes an array (document) to store information from each document.
     documents = []
-    for file_name in os.listdir(pdf_dir):
+    
+    # The loop runs through each file in the directory and checks whether the file is a pdf or not.
+    for file_name in os.listdir(pdf_dir): 
+        
+        # If the file is a pdf we establish the file path
         if file_name.endswith(".pdf"):
+            
+            # file_path established by joining the name of the file with the .pdf for opening the file with a pdf opener library called **fitz**(alias for PyMuPdf).
             file_path = os.path.join(pdf_dir, file_name)
-            with fitz.open(file_path) as doc:
-                text = "\n".join([page.get_text() for page in doc])
+            
+            with fitz.open(file_path) as doc: # "as doc" returns a document object that allows you to interact with the pdf
+                text = "\n".join([page.get_text() for page in doc]) # The doc object is iterable through page objects, each iterable is a page object.
+                # "\n".join is used to join text from each page of the pdf with a newline in between.
+                # "text" now contains all the text from a single pdf document.
+                
+                # Document class is used to store structured text data along with meta data(dict storing dditional info like filename)
+                # page_content :  the extracted text from a PDF
                 documents.append(Document(page_content=text, metadata={"source":file_name}))
+                
+    # documents array stores instances of the "Document" class containing pdf content as text and metadata.
     return documents
 
 # === GETTING THE EMBEDDINGS FROM THE HUGGING FACE API ===

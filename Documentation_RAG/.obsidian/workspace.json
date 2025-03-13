@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Code_Documentation/Functions/load_pdfs_from_directory.md",
+                "file": "Code_Documentation/Functions and variables/load_pdfs_from_directory.md",
                 "mode": "source",
                 "source": false
               },
@@ -171,13 +171,17 @@
   },
   "active": "853e8340dabdf9b5",
   "lastOpenFiles": [
-    "Code_Documentation/Workflow.md",
-    "Git functions.md",
+    "Code_Documentation/Functions and variables/Global Variables.md",
+    "Conda Venv functions.md",
     "requirements.txt.md",
-    "Code_Documentation/Functions/load_pdfs_from_directory.md",
+    "Code_Documentation/Functions and variables/main.md",
+    "Code_Documentation/Workflow.md",
+    "Code_Documentation/Functions and variables/load_pdfs_from_directory.md",
+    "Code_Documentation/Images/global variables.png",
+    "Code_Documentation/Images/main.png",
     "Code_Documentation/Images/load_pdfs_from_directory.png",
     "Code_Documentation/Images",
-    "Code_Documentation/Functions",
+    "Code_Documentation/Functions and variables",
     "Code Documentation/Untitled",
     "Code_Documentation",
     "Welcome.md"
