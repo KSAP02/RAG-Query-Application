@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "da6daddfa71ebc74",
@@ -168,14 +169,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "80b21e3f88897312",
+  "active": "853e8340dabdf9b5",
   "lastOpenFiles": [
-    "Code_Documentation/Images/load_pdfs_from_directory.png",
-    "Code_Documentation/Functions/load_pdfs_from_directory.md",
-    "Code_Documentation/Images",
-    "requirements.txt.md",
-    "Git functions.md",
     "Code_Documentation/Workflow.md",
+    "Git functions.md",
+    "requirements.txt.md",
+    "Code_Documentation/Functions/load_pdfs_from_directory.md",
+    "Code_Documentation/Images/load_pdfs_from_directory.png",
+    "Code_Documentation/Images",
     "Code_Documentation/Functions",
     "Code Documentation/Untitled",
     "Code_Documentation",
