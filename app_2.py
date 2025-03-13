@@ -63,8 +63,20 @@ def get_hf_embeddings(texts):
     else:
         raise Exception(f"Error fetching embeddings: {response.json()}")
     
+
+# === CREATING A VECTOR DATABASE USING FAISS WITH THE DOCUMENT TEXT DATA ===
+
+# The function takes in the documents list containing the "Document" instances as a parameter    
 def create_faiss_vectorstore(documents):
+    
+    # Defining an object "text_splitter" for the class "RecursiveCharacterTextSplitter" (Uses a recursive approach to break text at the most natural boundaries (e.g., sentences → words → characters).)
+    # which helps to create chunks of data for easy processing with a chunk overlap.
+    # chunk_size: each chunk has 512 characters max;
+    # chunk_overlap: Adjacent chunks will have max 50 overlapping character to ensure important context is not lost between chunks
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=512, chunk_overlap=50)
+    
+    # "split_documents" takes the documents list and splits each "Document" in the list into smaller chunks based on the above function.
+    # "chunks" now stores a list of Document objects(chunk) which now stores only text of 512 characters or less and its meta data.
     chunks = text_splitter.split_documents(documents)
     
     texts = [chunk.page_content for chunk in chunks]
@@ -129,6 +141,7 @@ def query_hf_llm(prompt):
             return response_json[0]['generated_text']
                 
         except Exception as e:
+            
             print(f"Error processing response: {e}")
             print(f"Raw response: {response.text}")
             return f"Error: {str(e)}"
