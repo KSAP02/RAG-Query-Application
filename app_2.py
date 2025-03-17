@@ -168,7 +168,7 @@ def retrieve_context(query, vector_store, chunks):
     # Finally the most similar chunks are retrieved using the indices array.
     retrieved_texts = [chunks[i].page_content for i in indices[0] if i < len(chunks)]
     
-    # The retieved text chunks are joined together wil double newline(\n\n) to form a single string
+    # The retieved text chunks are joined together with double newline(\n\n) to form a single string
     # The combined string is returned as the context for the query.
     return "\n\n".join(retrieved_texts)
 
