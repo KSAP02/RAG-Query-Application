@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Code_Documentation/Workflow.md",
+                "file": "Code_Documentation/Functions and variables/Global Variables.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Workflow"
+              "title": "Global Variables"
             }
           }
         ]
@@ -168,18 +168,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "853e8340dabdf9b5",
+  "active": "80b21e3f88897312",
   "lastOpenFiles": [
+    "Conda Venv functions.md",
+    "Code_Documentation/Workflow.md",
     "Code_Documentation/Functions and variables/main.md",
     "Untitled.canvas",
     "Code_Documentation/Functions and variables/load_pdfs_from_directory.md",
     "Code_Documentation/Functions and variables/Global Variables.md",
     "Code_Documentation/Images/main.png",
     "Code_Documentation/Images/load_pdfs_from_directory.png",
-    "Code_Documentation/Images/global variables.png",
-    "Conda Venv functions.md",
+    "Code_Documentation/Images/global_variables.png",
     "requirements.txt.md",
-    "Code_Documentation/Workflow.md",
     "Code_Documentation/Images",
     "Code_Documentation/Functions and variables",
     "Code Documentation/Untitled",

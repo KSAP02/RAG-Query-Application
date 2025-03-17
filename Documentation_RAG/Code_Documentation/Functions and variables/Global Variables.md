@@ -1,4 +1,4 @@
-![[../Images/global variables.png]]
+![[../Images/global_variables.png]]
 
 *load_dotenv()*
 * Loads the .env file that is inside the working directory
