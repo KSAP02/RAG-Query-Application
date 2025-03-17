@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Code_Documentation/Functions and variables/load_pdfs_from_directory.md",
+                "file": "Conda Venv functions.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "load_pdfs_from_directory"
+              "title": "Conda Venv functions"
             }
           }
         ]
@@ -171,6 +171,7 @@
   "active": "853e8340dabdf9b5",
   "lastOpenFiles": [
     "Code_Documentation/Functions and variables/Global Variables.md",
+    "requirements.txt.md",
     "Code_Documentation/Functions and variables/load_pdfs_from_directory.md",
     "Conda Venv functions.md",
     "Code_Documentation/Workflow.md",
@@ -179,7 +180,6 @@
     "Code_Documentation/Images/main.png",
     "Code_Documentation/Images/load_pdfs_from_directory.png",
     "Code_Documentation/Images/global_variables.png",
-    "requirements.txt.md",
     "Code_Documentation/Images",
     "Code_Documentation/Functions and variables",
     "Code Documentation/Untitled",
