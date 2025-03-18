@@ -113,13 +113,16 @@ def create_faiss_vectorstore(documents):
     
     # Initialize the Semantic Chunker with Hugging Face Embeddings; The Semanticchunker class takes in arguments as an embedding object
     # "breakpoint_threshold_type" can be => percentile, standard_deviation, interquartile, gradient
-    text_splitter = SemanticChunker(hf_embedding, breakpoint_threshold_type="standard_deviation")
+    text_splitter = SemanticChunker(hf_embedding, breakpoint_threshold_type="percentile")
     
     #"split_ documents" takes the documents list and splits each "Document" in the list into smaller chunks based on the above function w.r.t. semantic embedding.
     # The Semantic chunker class object automatically takes the page content from the documents object for chunking.
     # "chunks" now stores a list of Document objects(chunk) which now stores only text of certain number of characters based on the semantic chunking function
     # and also its meta data.
     chunks = text_splitter.split_documents(documents)    
+    
+    # print(chunks[0].page_content)
+    # exit()
     
     # "texts" array stores just the page content of the chunks as strings.
     texts = [chunk.page_content for chunk in chunks]
