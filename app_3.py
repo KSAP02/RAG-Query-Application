@@ -84,6 +84,8 @@ def get_hf_embeddings(texts):
 # === CREATING A VECTOR DATABASE USING FAISS WITH THE DOCUMENT TEXT DATA ===
 
 # Defining a embedding wrapper class for defining Langchain semanticchunking object
+# We use this class for setting embeddings for texts for semantic chunking.
+# This text embedding is not related to the vector embedding storage this is just for checking semantic similarity for chunking
 class HFEmbeddingWrapper:
     def __init__(self, model_name=EMBEDDING_MODEL, api_key=HF_API_KEY):
         self.model_name = model_name
@@ -93,7 +95,7 @@ class HFEmbeddingWrapper:
         # Sending a batch of texts to Hugging Face API for embedding
         return get_hf_embeddings(texts)
     
-    # These function are defined for the internal Langchain class because langchain classes call these functions
+    # These functions are defined for the internal Langchain class because langchain classes call these functions internally in their functions
     # and if not defined will results in error.
     def embed_documents(self, texts):
         # Embed multiple documents (list of texts)
@@ -106,19 +108,18 @@ class HFEmbeddingWrapper:
 # The function takes in the documents list containing the "Document" instances as a parameter    
 def create_faiss_vectorstore(documents):
     
-    # Initialize Hugging Face Embeddings Wrapper Class with an object
+    # Initialize Hugging Face Embeddings Wrapper Class with an object fr passing to the Semancticchunker class
     hf_embedding = HFEmbeddingWrapper()
     
-    # Initialize the Semantic Chunker with Hugging Face Embeddings
-    text_splitter = SemanticChunker(hf_embedding)
+    # Initialize the Semantic Chunker with Hugging Face Embeddings; The Semanticchunker class takes in arguments as an embedding object
+    # "breakpoint_threshold_type" can be => percentile, standard_deviation, interquartile, gradient
+    text_splitter = SemanticChunker(hf_embedding, breakpoint_threshold_type="standard_deviation")
     
-    # "split_documents" takes the documents list and splits each "Document" in the list into smaller chunks based on the above function.
-    # "chunks" now stores a list of Document objects(chunk) which now stores only text of 512 characters or less and its meta data.
-    chunks = text_splitter.split_documents(documents)
-    
-    print(chunks[0])  # Check Semantic embeddings for query without chunking
-    exit()    
-    
+    #"split_ documents" takes the documents list and splits each "Document" in the list into smaller chunks based on the above function w.r.t. semantic embedding.
+    # The Semantic chunker class object automatically takes the page content from the documents object for chunking.
+    # "chunks" now stores a list of Document objects(chunk) which now stores only text of certain number of characters based on the semantic chunking function
+    # and also its meta data.
+    chunks = text_splitter.split_documents(documents)    
     
     # "texts" array stores just the page content of the chunks as strings.
     texts = [chunk.page_content for chunk in chunks]
@@ -213,7 +214,7 @@ def query_hf_llm(prompt):
     payload = {
         "inputs": prompt,
         "parameters": {
-            "max_length": 512,  # Adjust based on your needs
+            "max_length": 1000,  # Adjust based on your needs
             "min_length": 100,
             "temperature": 0.5,  # Lower for more deterministic responses
             "num_return_sequences": 1
